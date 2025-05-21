@@ -1,0 +1,17 @@
+server:
+  port: 8084
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-payment:5432/pagamentos
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate.ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    postgresql:
+      compatible-versions: 15
+
+management.endpoints.web.exposure.include: health,info
